@@ -19,9 +19,9 @@
     </header>
 
     <main>
-        <section id="totalRevenue">
-            <h2>Total Revenue</h2>
-            <p id="revenueAmount">Total Revenue: ₹<span id="totalRevenueAmount">0</span></p>
+        <section>
+            <h2>Revenue Summary</h2>
+            <p id="totalRevenue">Total Revenue: ₹0</p>
         </section>
     </main>
 
@@ -29,6 +29,14 @@
         <p>&copy; 2024 Suraj's P.T Management</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        fetch('/clients.json')
+            .then(response => response.json())
+            .then(data => {
+                const totalRevenue = data.reduce((sum, client) => sum + client.price, 0);
+                document.getElementById('totalRevenue').textContent = `Total Revenue: ₹${totalRevenue}`;
+            })
+            .catch(error => console.error('Error fetching client data:', error));
+    </script>
 </body>
 </html>
