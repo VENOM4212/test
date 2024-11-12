@@ -1,40 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Training Management</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Personal Training Management</h1>
+    <header>
+        <h1>Personal Training Management</h1>
+        <nav>
+            <ul>
+                <li><a href="#clients">Clients</a></li>
+                <li><a href="#appointments">Appointments</a></li>
+                <li><a href="#revenue">Revenue</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="client-info">
-        <label for="client-name">Client Name:</label>
-        <input type="text" id="client-name">
+    <main>
+        <section id="clients">
+            <h2>Client Management</h2>
+            <form id="clientForm">
+                <input type="text" id="clientName" placeholder="Client Name" required>
+                <input type="number" id="clientSessions" placeholder="Total Sessions" required>
+                <button type="submit">Add Client</button>
+            </form>
+            <ul id="clientList"></ul>
+        </section>
 
-        <label for="client-email">Client Email:</label>
-        <input type="email" id="client-email">
+        <section id="appointments">
+            <h2>Appointment Scheduling</h2>
+            <form id="appointmentForm">
+                <input type="text" id="appointmentClient" placeholder="Client Name" required>
+                <input type="datetime-local" id="appointmentTime" required>
+                <button type="submit">Schedule Appointment</button>
+            </form>
+            <ul id="appointmentList"></ul>
+        </section>
 
-        </div>
+        <section id="revenue">
+            <h2>Revenue Tracking</h2>
+            <input type="number" id="sessionPrice" placeholder="Price per Session" required>
+            <button id="calculateRevenue">Calculate Revenue</button>
+            <p>Total Revenue: $<span id="totalRevenue">0</span></p>
+        </section>
+    </main>
 
-    <div class="appointment-schedule">
-        <label for="appointment-date">Appointment Date:</label>
-        <input type="date" id="appointment-date">
-
-        <label for="appointment-time">Appointment Time:</label>
-        <input type="time" id="appointment-time">
-    </div>
-
-    <div class="progress-tracking">
-        <label for="weight">Weight:</label>
-        <input type="number" id="weight">
-
-        </div>
-
-    <div class="payment-renewal">
-        </div>
-
-    <div class="reporting-analytics">
-        </div>
+    <footer>
+        <p>&copy; 2023 Personal Training Management</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
