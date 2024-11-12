@@ -2,11 +2,14 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-image: url('https://images.unsplash.com/photo-1511988617500-4a2a2b5f5b9e'); /* Gym Background */
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
 }
 
 header {
-    background: #35424a;
+    background: rgba(53, 66, 74, 0.8);
     color: #ffffff;
     padding: 10px 0;
     text-align: center;
@@ -29,10 +32,12 @@ nav a {
 
 main {
     padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
 }
 
 section {
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
     margin: 10px 0;
     padding: 15px;
     border-radius: 5px;
@@ -46,6 +51,8 @@ input {
     margin: 5px 0;
     padding: 10px;
     width: calc(100% - 22px);
+    border: none;
+    border-radius: 5px;
 }
 
 button {
@@ -53,6 +60,7 @@ button {
     background: #35424a;
     color: #ffffff;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
@@ -63,6 +71,14 @@ button:hover {
 footer {
     text-align: center;
     padding: 10px 0;
-    background: #35424a;
+    background: rgba(53, 66, 74, 0.8);
     color: #ffffff;
+}
+
+.action-button {
+    background-color: #28a745; /* Green color for action buttons */
+}
+
+.action-button:hover {
+    background-color: #218838; /* Darker green on hover */
 }
