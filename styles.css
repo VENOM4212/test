@@ -43,9 +43,16 @@ h2 {
     cursor: pointer;
 }
 
-.action-button:hover {
+.action-button :hover {
     background: #45a049;
 }
 
 footer {
-   
+    text-align: center;
+    padding: 10px 0;
+    background: #35424a;
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
