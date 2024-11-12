@@ -12,8 +12,6 @@
         <nav>
             <ul>
                 <li><a href="#clients">Clients</a></li>
-                <li><a href="#appointments">Appointments</a></li>
-                <li><a href="#revenue">Revenue</a></li>
                 <li><a href="total_clients.html">Total Clients</a></li>
                 <li><a href="total_appointments.html">Total Appointments</a></li>
                 <li><a href="total_revenue.html">Total Revenue</a></li>
@@ -25,25 +23,19 @@
         <section id="clients">
             <h2>Client Management</h2>
             <form id="clientForm">
-                <input type="text" id="clientName" placeholder="Client Name" required>
-                <input type="number" id="clientSessions" placeholder="Total Sessions" required>
+                <input type="text" id="clientFullName" placeholder="Full Name" required>
+                <input type="date" id="clientDOB" placeholder="Date of Birth" required>
+                <select id="clientDuration" required>
+                    <option value="" disabled selected>Select Duration</option>
+                    <option value="1">1 Month</option>
+                    <option value="2">2 Months</option>
+                    <option value="3">3 Months</option>
+                </select>
+                <input type="number" id="clientPrice" placeholder="Price (INR)" required>
+                <button type="submit" class="action-button">Save Client</button>
             </form>
+            <ul id="clientList"></ul>
         </section>
-
-        <section id="appointments">
-            <h2>Appointment Scheduling</h2>
-            <form id="appointmentForm">
-                <input type="text" id="appointmentClient" placeholder="Client Name" required>
-                <input type="datetime-local" id="appointmentTime" required>
-            </form>
-        </section>
-
-        <section id="revenue">
-            <h2>Revenue Tracking</h2>
-            <input type="number" id="sessionPrice" placeholder="Price per Session (INR)" required>
-        </section>
-
-        <button id="uploadData" class="action-button">Upload All Data</button>
     </main>
 
     <footer>
