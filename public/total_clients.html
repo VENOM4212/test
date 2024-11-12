@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Clients Acquired</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Total Clients Acquired</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>< a href="total_appointments.html">Total Appointments</a></li>
+                <li><a href="total_revenue.html">Total Revenue</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>List of Clients</h2>
+            <ul id="clientList"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Suraj's P.T Management</p>
+    </footer>
+
+    <script>
+        fetch('/clients.json')
+            .then(response => response.json())
+            .then(data => {
+                const clientList = document.getElementById('clientList');
+                data.forEach(client => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = `${client.fullName} - ${client.dob} - ${client.duration} - ₹${client.price}`;
+                    clientList.appendChild(listItem);
+                });
+            })
+            .catch(error => console.error('Error fetching client data:', error));
+    </script>
+</body>
+</html>
