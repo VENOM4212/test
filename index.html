@@ -24,7 +24,7 @@
             <form id="clientForm">
                 <input type="text" id="clientName" placeholder="Client Name" required>
                 <input type="number" id="clientSessions" placeholder="Total Sessions" required>
-                <button type="submit">Add Client</button>
+                <button type="submit" class="action-button">Add Client</button>
             </form>
             <ul id="clientList"></ul>
         </section>
@@ -34,7 +34,7 @@
             <form id="appointmentForm">
                 <input type="text" id="appointmentClient" placeholder="Client Name" required>
                 <input type="datetime-local" id="appointmentTime" required>
-                <button type="submit">Schedule Appointment</button>
+                <button type="submit" class="action-button">Schedule Appointment</button>
             </form>
             <ul id="appointmentList"></ul>
         </section>
@@ -42,7 +42,7 @@
         <section id="revenue">
             <h2>Revenue Tracking</h2>
             <input type="number" id="sessionPrice" placeholder="Price per Session" required>
-            <button id="calculateRevenue">Calculate Revenue</button>
+            <button id="calculateRevenue" class="action-button">Calculate Revenue</button>
             <p>Total Revenue: $<span id="totalRevenue">0</span></p>
         </section>
     </main>
