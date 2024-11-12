@@ -2,13 +2,11 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('gym-background.jpg'); /* Add your gym background image here */
-    background-size: cover;
-    color: #ffffff;
+    background-color: #f4f4f4;
 }
 
 header {
-    background: rgba(53, 66, 74, 0.8);
+    background: #35424a;
     color: #ffffff;
     padding: 10px 0;
     text-align: center;
@@ -31,31 +29,30 @@ nav ul li a {
 
 main {
     padding: 20px;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
 }
 
 h2 {
+    color: #35424a;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #35424a;
     color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
 .action-button {
-    background: #35424a;
-    color: #ffffff;
+    background-color: #35424a;
+    color: white;
     border: none;
     padding: 10px 15px;
     cursor: pointer;
 }
 
 .action-button:hover {
-    background: #45a049;
-}
-
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background: rgba(53, 66, 74, 0.8);
-    color: #ffffff;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    background-color: #45a049;
 }
