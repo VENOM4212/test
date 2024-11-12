@@ -1,22 +1,17 @@
-// script.js
-// Add JavaScript code for dynamic features like form validation, AJAX requests, etc.
-// For example, to validate the client name and email:
+document.getElementById('clientForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const clientName = document.getElementById('clientName').value;
+    const clientSessions = document.getElementById('clientSessions').value;
 
-const clientNameInput = document.getElementById('client-name');
-const clientEmailInput = document.getElementById('client-email');
+    const clientList = document.getElementById('clientList');
+    const li = document.createElement('li');
+    li.textContent = `${clientName} - Total Sessions: ${clientSessions}`;
+    clientList.appendChild(li);
 
-clientNameInput.addEventListener('blur', () => {
-    if (clientNameInput.value.trim() === '') {
-        alert('Please enter a valid client name.');
-    }
+    document.getElementById('clientForm').reset();
 });
 
-clientEmailInput.addEventListener('blur', () => {
-    if (!isValidEmail(clientEmailInput.value)) {
-        alert('Please enter a valid email address.');
-    }
-});
-
-function isValidEmail(email) {
-    // Implement email validation logic here
-}
+document.getElementById('appointmentForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const appointmentClient = document.getElementById('appointmentClient').value;
+    const appointmentTime = document.getElementById('
